@@ -1,7 +1,7 @@
 # plaza-web
 
 Next.js marketing site for Plaza Civic, plus the Telegraph × Dwight ballot at
-`/vote`. Deployed to Vercel at `plaza-app.org`.
+`/vote`. Deployed to Vercel at `plazacivic.org`.
 
 ## Develop
 
