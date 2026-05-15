@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #F5F2EC;
+  --text: #1a1a18;
+  --accent: #1D9E75;
+  --muted: #888780;
+  --border: #D3D1C7;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-text: var(--text);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.legal-prose {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.legal-prose h2 {
+  font-family: var(--font-serif), serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+.legal-prose p {
+  margin-bottom: 14px;
+}
+.legal-prose ul {
+  list-style: none;
+  margin-bottom: 18px;
+  padding-left: 0;
+}
+.legal-prose li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+.legal-prose li::before {
+  content: "·";
+  position: absolute;
+  left: 4px;
+  color: var(--muted);
+}
+.legal-prose strong {
+  font-weight: 500;
+}
+.legal-prose .highlight {
+  background: rgba(29, 158, 117, 0.08);
+  border-left: 2px solid var(--accent);
+  padding: 18px 22px;
+  margin: 28px 0;
+  font-size: 13px;
+}
+.legal-prose .divider {
+  height: 1px;
+  background: var(--border);
+  margin: 36px 0;
+}
+.legal-prose .contact-block {
+  margin-top: 48px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.legal-prose .contact-block h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
