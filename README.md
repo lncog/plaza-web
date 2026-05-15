@@ -1,12 +1,11 @@
 # plaza-web
 
 Next.js marketing site for Plaza Civic, plus the Telegraph × Dwight ballot at
-`/vote`. Lives at `marketing/`. Deployed to Vercel at `plaza-app.org`.
+`/vote`. Deployed to Vercel at `plaza-app.org`.
 
 ## Develop
 
 ```bash
-cd marketing
 npm install
 npm run dev
 ```
@@ -21,7 +20,7 @@ npm run dev
 ## Ballot Google Form wiring
 
 The ballot at `/vote` POSTs ranks to a Google Form. Constants live near the top
-of `marketing/app/vote/VoteClient.tsx`:
+of `app/vote/VoteClient.tsx`:
 
 ```ts
 const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/.../formResponse'
