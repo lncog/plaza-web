@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": ".",
+    "public": "ballot",
     "ignore": [
       "firebase.json",
       ".firebaserc",
@@ -11,12 +11,6 @@
       "**/.*"
     ],
     "cleanUrls": true,
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ],
     "headers": [
       {
         "source": "/index.html",
