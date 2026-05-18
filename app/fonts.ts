@@ -37,3 +37,10 @@ const dmSans = DM_Sans({
 });
 
 export const fontClass = `${cormorant.variable} ${inter.variable} ${playfair.variable} ${lora.variable} ${dmSans.variable}`;
+
+// Single sitewide favicon, defined once. Both route-group layouts spread
+// this into their metadata so the icon is identical everywhere.
+export const siteIcons = {
+  icon: "/icon.png",
+  apple: "/icon.png",
+};

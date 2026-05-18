@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { fontClass } from "../fonts";
+import { fontClass, siteIcons } from "../fonts";
 import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Telegraph × Dwight — Vote on Features",
   description:
     "Rank the top 3 features you'd like to see at the Telegraph × Dwight intersection.",
+  icons: siteIcons,
 };
 
 export default function BallotLayout({
