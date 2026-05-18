@@ -15,7 +15,10 @@ export default function Nav() {
 
   return (
     <nav className={styles.nav}>
-      <Link href="/" className={styles.navWordmark} onClick={() => setOpen(false)}>
+      <Link
+        href="/"
+        className={styles.navWordmark}
+        onClick={() => setOpen(false)}>
         Plaza
       </Link>
 

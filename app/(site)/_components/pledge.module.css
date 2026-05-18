@@ -1,0 +1,341 @@
+/* Pledge page, ported from mockup. Responsive authored.
+   NOTE: interactive fake card form is DEVELOP-ONLY (team review).
+   Must be disabled/replaced before merging to main. */
+
+.pledgePage {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pledgeLeft {
+  background: var(--text);
+  padding: 120px 64px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.pledgeLeft::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(255, 255, 255, 0.04);
+  top: -100px;
+  right: -100px;
+}
+.pledgeLeft::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(255, 255, 255, 0.04);
+  bottom: -60px;
+  left: -80px;
+}
+
+.pledgeWordmark {
+  font-family: var(--font-serif), serif;
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--bg);
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.pledgeLeftMain {
+  position: relative;
+  z-index: 1;
+}
+
+.pledgeEyebrow {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.pledgeLeftTitle {
+  font-family: var(--font-serif), serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--bg);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+.pledgeLeftTitle em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.pledgeLeftBody {
+  font-size: 13px;
+  color: rgba(245, 242, 236, 0.5);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.pledgeBenefits {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pledgeBenefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: rgba(245, 242, 236, 0.6);
+}
+
+.pledgeBenefitDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.pledgeLeftFooter {
+  font-size: 10px;
+  color: rgba(245, 242, 236, 0.2);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.pledgeRight {
+  background: var(--bg);
+  padding: 120px 64px 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pledgeRightTitle {
+  font-family: var(--font-serif), serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.pledgeRightSub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.devBanner {
+  background: #fef3e2;
+  border: 0.5px solid var(--warm);
+  color: var(--warm);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 11px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.billingToggle {
+  display: flex;
+  gap: 4px;
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.billingOpt {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  background: transparent;
+}
+.billingOpt.active {
+  background: var(--text);
+  color: var(--bg);
+  font-weight: 500;
+}
+
+.tierCard {
+  background: var(--card);
+  border: 1.5px solid var(--accent);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tierLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.tierEmoji {
+  font-size: 22px;
+}
+.tierName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.tierDesc {
+  font-size: 11px;
+  color: var(--muted);
+}
+.tierPrice {
+  font-family: var(--font-serif), serif;
+  font-size: 28px;
+  color: var(--text);
+}
+.tierPrice span {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.formLabel {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.formField {
+  margin-bottom: 14px;
+}
+
+.fieldLabel {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.fieldInput {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.fieldInput:focus {
+  border-color: var(--accent);
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.stripeRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  margin-top: 2px;
+}
+
+.stripeBadge {
+  background: #635bff;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.submitBtn {
+  width: 100%;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 14px;
+  transition: opacity 0.2s;
+}
+.submitBtn:hover {
+  opacity: 0.85;
+}
+.submitBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.disclosure {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.65;
+  padding-top: 14px;
+  border-top: 0.5px solid var(--border);
+  margin-top: auto;
+}
+
+.success {
+  background: var(--accent-light);
+  border: 0.5px solid var(--accent);
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+}
+.successTitle {
+  font-family: var(--font-serif), serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.successBody {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .pledgePage {
+    grid-template-columns: 1fr;
+  }
+  .pledgeLeft {
+    padding: 100px 22px 48px;
+  }
+  .pledgeLeftTitle {
+    font-size: 32px;
+  }
+  .pledgeRight {
+    padding: 48px 22px 48px;
+  }
+}
