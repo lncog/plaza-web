@@ -328,14 +328,20 @@
 @media (max-width: 900px) {
   .pledgePage {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Form first on mobile — it's the primary action. The dark marketing
+     panel moves below so users don't scroll past it to pay. */
+  .pledgeRight {
+    order: 1;
+    padding: 96px 22px 40px;
   }
   .pledgeLeft {
-    padding: 100px 22px 48px;
+    order: 2;
+    padding: 48px 22px 48px;
   }
   .pledgeLeftTitle {
     font-size: 32px;
-  }
-  .pledgeRight {
-    padding: 48px 22px 48px;
   }
 }

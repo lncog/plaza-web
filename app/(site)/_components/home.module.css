@@ -25,6 +25,8 @@
   padding: 120px 64px 80px;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .heroRing {
@@ -417,6 +419,9 @@
   .hero {
     padding: 100px 22px 60px;
     min-height: 90vh;
+  }
+  .heroRing {
+    display: none;
   }
   .howSection {
     padding: 64px 22px;
