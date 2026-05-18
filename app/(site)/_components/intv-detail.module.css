@@ -454,7 +454,7 @@
   opacity: 0.85;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
     gap: 40px;

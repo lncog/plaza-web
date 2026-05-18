@@ -325,7 +325,7 @@
   line-height: 1.6;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .pledgePage {
     grid-template-columns: 1fr;
   }
