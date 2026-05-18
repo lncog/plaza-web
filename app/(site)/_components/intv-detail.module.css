@@ -1,0 +1,488 @@
+/* Initiative detail page, ported from mockup. Responsive authored. */
+
+.hero {
+  padding: 140px 64px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 12px;
+  padding: 5px 12px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.title {
+  font-family: var(--font-serif), serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.location {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.metaItem {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.metaLabel {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.metaValue {
+  font-family: var(--font-serif), serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.fundingCard {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  position: sticky;
+  top: 100px;
+}
+
+.fundingLabel {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.fundingAmount {
+  font-family: var(--font-serif), serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.fundingTarget {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.fundingBar {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.fundingFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.fundingStats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.fundingBtn {
+  width: 100%;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: opacity 0.2s;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.fundingBtn:hover {
+  opacity: 0.85;
+}
+
+.fundingNote {
+  font-size: 10px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.docSection {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 64px;
+  border-top: 0.5px solid var(--border);
+}
+
+.docSectionTitle {
+  font-family: var(--font-serif), serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 28px;
+  letter-spacing: -0.01em;
+}
+
+.dataSessions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.dataSession {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.dataSessionName {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.dataSessionMeta {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.dataResults {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dataResultRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dataResultLabel {
+  font-size: 12px;
+  color: var(--text);
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.dataResultBar {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.dataResultFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.dataResultScore {
+  font-family: var(--font-serif), serif;
+  font-size: 16px;
+  color: var(--text);
+  width: 40px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.methodologyBox {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.methodologyBox strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.improvementGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.improvementItem {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.improvementItem.dashed {
+  border: 0.5px dashed var(--border);
+  background: transparent;
+}
+
+.improvementIcon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.improvementName {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.improvementItem.dashed .improvementName {
+  color: var(--muted);
+}
+
+.improvementDesc {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 28px;
+  position: relative;
+}
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+.timelineItem:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.timelineDot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  flex-shrink: 0;
+  margin-top: 2px;
+  position: relative;
+  z-index: 1;
+}
+.timelineDot.active,
+.timelineDot.complete {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.timelineTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.timelineDesc {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.partnersRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.partnerChip {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.partnerChip.muted {
+  opacity: 0.5;
+}
+
+.partnerDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.partnerChip.muted .partnerDot {
+  background: var(--border);
+}
+
+.qrSection {
+  background: var(--text);
+  padding: 60px 64px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.qrBox {
+  width: 80px;
+  height: 80px;
+  background: var(--bg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.qrTitle {
+  font-family: var(--font-serif), serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--bg);
+  margin-bottom: 6px;
+}
+
+.qrDesc {
+  font-size: 12px;
+  color: rgba(245, 242, 236, 0.5);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.qrBtn {
+  background: var(--bg);
+  color: var(--text);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.qrBtn:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 110px 22px 40px;
+  }
+  .fundingCard {
+    position: static;
+  }
+  .metaGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .docSection {
+    padding: 48px 22px;
+  }
+  .dataSessions {
+    grid-template-columns: 1fr;
+  }
+  .dataResultLabel {
+    width: 120px;
+    font-size: 11px;
+  }
+  .improvementGrid {
+    grid-template-columns: 1fr;
+  }
+  .qrSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 48px 22px;
+  }
+}

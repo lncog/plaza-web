@@ -1,0 +1,238 @@
+/* About + Initiatives styling, ported from mockup. Responsive authored. */
+
+/* ---------- ABOUT ---------- */
+.aboutHero {
+  padding: 140px 64px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.aboutIntro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+.aboutBody {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.aboutBody p + p {
+  margin-top: 16px;
+}
+
+.aboutStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.aboutStat {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 20px;
+}
+
+.aboutStatValue {
+  font-family: var(--font-serif), serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.aboutStatValue span {
+  color: var(--accent);
+}
+
+.aboutStatLabel {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.aboutValues {
+  border-top: 0.5px solid var(--border);
+  padding-top: 60px;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.valueNum {
+  font-family: var(--font-serif), serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--border);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.valueTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.valueDesc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.aboutLegal {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.aboutLegalText {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.aboutLegalText strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.aboutLegalBadge {
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 12px;
+  padding: 6px 14px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---------- INITIATIVES LIST ---------- */
+.listHero {
+  padding: 140px 64px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.listGrid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 64px 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.listCard {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  display: block;
+}
+.listCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+}
+.listCard.disabled {
+  pointer-events: none;
+}
+
+.listTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.listTag.pending {
+  background: #fef3e2;
+  color: var(--warm);
+}
+.listTagDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+
+.listCardTitle {
+  font-family: var(--font-serif), serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.listCardLocation {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.listCardDesc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .aboutHero {
+    padding: 110px 22px 60px;
+  }
+  .aboutIntro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 56px;
+  }
+  .aboutStats {
+    grid-template-columns: 1fr 1fr;
+  }
+  .aboutValues {
+    padding-top: 48px;
+  }
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .aboutLegal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 24px;
+  }
+  .listHero {
+    padding: 110px 22px 24px;
+  }
+  .listGrid {
+    grid-template-columns: 1fr;
+    padding: 12px 22px 40px;
+  }
+}
